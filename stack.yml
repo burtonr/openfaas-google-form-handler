@@ -1,0 +1,10 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+functions:
+  signup-form:
+    lang: csharp
+    handler: ./signup-form
+    image: signup-form:latest
+    secrets:
+      - slack-token
